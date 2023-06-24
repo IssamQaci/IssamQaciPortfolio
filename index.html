@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body scroll="no">
+    <nav>
+        <h1>ISSAM <span>QACI</span></h1>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#sande">S&E</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact_me">CONTACT ME</a></li>
+        </ul>
+        <img src="imgs/dark-mode.png" alt="img-dark-mode">
+    </nav>
+    <main>
+        <div id="container">
+            <video autoplay muted loop id="background_video"><source src="background_video/matrix_-_14912 (1440p).mp4" type="video/mp4"></video>
+        </div>
+        <div id="home">
+            <div class="img">
+                <img id="background" src="imgs/Picsart_23-06-09_16-53-53-200.png" alt="pic">
+                <img id="issam"src="imgs/Picsart_23-06-09_16-53-45-122.png" alt="pic">
+            </div>
+            <div class="content">
+                <p><span>HI,</span> I'm ISSAM <span>FullStack</span> Devoloper</p>
+                <button>Download CV</button>
+            </div>
+        </div>
+        <div id="skills">
+            <div class="title">
+                <h1>SKILLS</h1>
+                <div class="line"></div>
+            </div>
+            <div class ="main">
+                <div id="frontend">
+                    <h1>FrontEnd</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, placeat.</p>
+                    <div class="cont">
+                        <img src="imgs/html.png" alt="html_pic">
+                        <img src="imgs/css.png" alt="css_pic">
+                        <img src="imgs/javascript.png" alt="javascript_pic">
+                        <img src="imgs/jquery.png" alt="jquery_pic">
+                        <img src="imgs/bootstrap.png" alt="bootstrap_pic">
+                    </div>           
+                </div>
+                <div id="backend">
+                    <h1>BackEnd</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, placeat.</p>
+                    <div class="cont">
+                        <img src="imgs/php.png" alt="php_pic">
+                        <img src="imgs/mysql.png" alt="mysql_pic">
+                        <img src="imgs/laravel.png" alt="php_pic">
+                    </div>        
+                </div>
+            </div>
+        </div>
+        <div id="sande">
+            <div class="title">
+                <h1>STUDIES & EXPERIENCES</h1>
+                <div class="line"></div>
+            </div>
+            <div class="main">
+                <div class="container">
+                    <div class="img">
+                        <img id="ofppt" src="imgs/ofppt-logo-B2CAD4E136-seeklogo.com.png" alt="pic">
+                    </div>
+                    <div class="content">
+                        <p>Diploma of Specialized Technician in Information Technology OFPPT HAY SALAM SALE 2022</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="img">
+                        <img id="ministre" src="imgs/Men_2021.png" alt="ministre_pic">
+                    </div>
+                    <div class="content">
+                        <p>PFF Internship in National Des Ressources Numériques,Rabat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="projects">
+            <div class="title">
+                <h1>PROJECTS</h1>
+                <div class="line"></div>
+            </div>
+                <div class="main">
+                    <div class="container">
+                        <div class="img">
+                            <img src="imgs/project.jpg" alt="img">
+                        </div>
+                        <div class="content">
+                            <h1>TITLE</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, provident itaque nesciunt libero natus atque.</p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="content">
+                            <h1>TITLE</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, provident itaque nesciunt libero natus atque.</p>
+                        </div>
+                        <div id="img2">
+                            <img src="imgs/land-book-web-design-inspiration.jpg" alt="img" >
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact_me">
+            <div id="parent" onmousemove="getmouseposition(event)">
+                <form id="contact" >
+                    <input type="text" name="name" id="input-name" placeholder="name">
+                    <input type="text" name="email" id="input-email" placeholder="email">
+                    <textarea name="message" id="input-message" placeholder="message"></textarea>
+                    <button type="submit" id="send">send</button>
+                </form>
+            </div>
+            <div id="dircontact">
+                <div id="email">
+                    <img src="imgs/email.png" alt="email_img">
+                    <p>issamqaci1010@gmail.com</p>
+                </div>
+                <div id="phone">
+                    <img src="imgs/phone.png" alt="phone_img">
+                    <p>0632462650</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
