@@ -19,8 +19,25 @@ body{
     background-color: var(--first_color--);
     color: var(--third_color--);
 }
-body::-webkit-scrollbar{
+/* body::-webkit-scrollbar{
     display: none;
+} */
+
+#scrollbar{
+    width: 100px;
+    height: 10px;
+    background-color:var(--second_color--);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1000;
+    transition: width 0.15s;
+}
+#scrollbar h1{
+    font-size: 0.75rem;
+    width: 20px;
+    right: 0px;
 }
 #container{
     position: absolute;
@@ -43,15 +60,12 @@ nav{
     align-items: center;
     justify-content: center;
     padding: 10px 20px 0px 20px;
-    /* border:1px solid black; */
 }
 ul{
     display:flex;
     width: 500px;
     justify-content: space-between;
     list-style: none;
-    
-    /* border:1px solid green; */
 }
 nav ul li a{
     padding:5px;
@@ -89,26 +103,36 @@ nav img{
 }
 #home{
     height: 93vh;
+    min-height: 700px;
     background-color: rgba(0, 0, 0, 0.7);
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
-#home .img img{
-    height: 250px;
-    top: 250px;
+#home .img{
     position: absolute;
-    /* border:1px solid green; */
+    left: 0;
+    top: 250px;
+    opacity: 0;
+    transition :opacity 0.5s, left 0.5s;
+}
+
+#home .img img{
+    position: absolute;
+    height: 250px;
 }
 
 #home .content{
+    position: absolute;
+    right:0;
     width: 400px;
     flex-wrap: wrap;
     margin-left: 300px;
     text-align: center;
-    /* border:1px solid green; */
+    opacity: 0;
+    transition : opacity 0.5s, right 0.5s;
 }
+
 #home .content p, span{
     font-size:4rem;
     
@@ -118,12 +142,16 @@ nav img{
 }
 #home .content button{
     border: none;
-    border-radius:10px;
     color:var(--third_color--);
     height:50px;
     width: 200px;
     background-color:var(--second_color--);
     margin-top:20px;
+    transition: color, background-color 0.5s;
+&:hover{
+    color: var(--second_color--);
+    background-color: var(--third_color--);
+}
 }
 #skills, #sande, #projects{
     padding : 50px 0px 50px 0px;
@@ -153,6 +181,7 @@ nav img{
 }
 #skills{
     height: 80vh;
+    min-height: 600px ;
 }
 #skills .main{
     margin-top: 100px ;
@@ -161,9 +190,17 @@ nav img{
 #frontend, #backend{
     width: 300px;
     height: 400px;
+    position: absolute;
     background-color: var(--second_color--);
     border: 1px solid white;
-    /* box-shadow: rgba(48, 173, 67, 0.4) 5px 5px, rgba(48, 173, 67, 0.3) 10px 10px, rgba(48, 173, 67, 0.2) 15px 15px, rgba(48, 173, 67, 0.1)20px 20px, rgba(48, 173, 67, 0.05) 25px 25px; */
+    opacity: 0;
+    transition: opacity 0.5s, left 0.5s, right 0.5s;
+}
+#frontend{
+    left: -150px;
+}
+#backend{
+    right: -150px;
 }
 #frontend h1, #backend h1{
     color: var(--main_color--);
@@ -192,6 +229,7 @@ nav img{
     flex-wrap: wrap;
     width: 80vw;
     justify-content: space-between;
+    justify-content: center;
 
 }
 .container{
@@ -291,8 +329,11 @@ nav img{
     gap: 30px;
     align-items: center;
     justify-content: center;
-    box-shadow: black 10px 10px;
+    border : 1px solid black;
     transition: box-shadow 0.25s;
+&:hover{
+    box-shadow: black -10px 10px;
+}
   }
   input{
     width: 250px;
