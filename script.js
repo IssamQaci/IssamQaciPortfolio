@@ -2,6 +2,34 @@ let x = 10;
 let y = 10;
 let color = "black ";
 let shadow = "";
+let isonload = false;
+let screenheight = 0;
+let sbheight = 0;
+let prsb = 0;
+setInterval(()=>{
+    if(prsb >= 0 && prsb <= 30){
+        document.getElementById("homeimage").style.left = ((window.innerWidth - 650)/2) +"px";
+        document.getElementById("homeimage").style.opacity = "1";
+        document.getElementById("homecontent").style.right = ((window.innerWidth- 650)/2) +"px";
+        document.getElementById("homecontent").style.opacity = "1";
+    }
+    else if(prsb >= 30){
+        document.getElementById("frontend").style.left = ((window.innerWidth - 680)/2) +"px";
+        document.getElementById("frontend").style.opacity = "1";
+        document.getElementById("backend").style.right = ((window.innerWidth- 680)/2) +"px";
+        document.getElementById("backend").style.opacity = "1";
+    }
+    //////////////////////////////
+    screenheight  = document.body.offsetHeight;
+    sbheight = scrollY + window.innerHeight;
+    prsb = Math.round((sbheight / screenheight)* 100);
+    document.getElementById("count").innerHTML = prsb + "%";
+    document.getElementById("scrollbar").style.width = prsb + "vw";
+}, 10)
+
+
+
+
 function getmouseposition(event){
     let mouseX =  event.clientX - ((window.innerWidth/2) - 125);
     let mouseY =  event.clientY- (window.innerHeight - 250);
@@ -91,3 +119,4 @@ function func2(event){
     }
 
 }
+
