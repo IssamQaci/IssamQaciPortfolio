@@ -7,7 +7,10 @@
     <title>test</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body scroll="no">
+<body>
+    <div id="scrollbar">
+        <h1 id="count">0%</h1>
+    </div>
     <nav>
         <h1>ISSAM <span>QACI</span></h1>
         <ul>
@@ -24,11 +27,11 @@
             <video autoplay muted loop id="background_video"><source src="background_video/matrix_-_14912 (1440p).mp4" type="video/mp4"></video>
         </div>
         <div id="home">
-            <div class="img">
+            <div class="img" id="homeimage">
                 <img id="background" src="imgs/Picsart_23-06-09_16-53-53-200.png" alt="pic">
                 <img id="issam"src="imgs/Picsart_23-06-09_16-53-45-122.png" alt="pic">
             </div>
-            <div class="content">
+            <div class="content" id="homecontent">
                 <p><span>HI,</span> I'm ISSAM <span>FullStack</span> Devoloper</p>
                 <button>Download CV</button>
             </div>
@@ -114,7 +117,7 @@
             </div>
         </div>
         <div id="contact_me">
-            <div id="parent" onmousemove="getmouseposition(event)">
+            <div id="parent">
                 <form id="contact" >
                     <input type="text" name="name" id="input-name" placeholder="name">
                     <input type="text" name="email" id="input-email" placeholder="email">
